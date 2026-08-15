@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZERkJGNyIvPjxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNjYiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWYiIGZvbnQtc2l6ZT0iNDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTFBMUEiPkFNPC90ZXh0Pjwvc3ZnPgo=">
 <style>
 :root {
   --paper: #FDFBF7;
@@ -101,9 +102,9 @@ a { color: inherit; }
   border: 1px solid var(--charcoal); transition: 0.15s;
 }
 .btn-primary { background-color: var(--charcoal); color: var(--white); }
-.btn-primary:hover { background-color: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background-color: #2451DD; border-color: #2451DD; }
 .btn-secondary { background-color: transparent; color: var(--charcoal); }
-.btn-secondary:hover { background-color: var(--charcoal); color: var(--white); }
+.btn-secondary:hover { background-color: #2451DD; border-color: #2451DD; color: var(--white); }
 
 .focus-areas { margin-top: 2rem; padding-top: 3rem; border-top: 1px solid var(--grid-line); }
 .page-label {
@@ -259,7 +260,7 @@ a { color: inherit; }
 .stat .desc { font-size: 0.8rem; opacity: 0.7; }
 
 /* Philosophy quote */
-.philosophy { text-align: left; }
+.philosophy { text-align: left; background-color: #E4E9FA; }
 .philosophy blockquote {
   font-family: "Instrument Serif", serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -278,7 +279,7 @@ a { color: inherit; }
   font-weight: 700; border: 1px solid var(--white);
   text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.15em;
 }
-.contact-link:hover { background-color: var(--white); color: var(--charcoal); }
+.contact-link:hover { background-color: #2451DD; border-color: #2451DD; color: var(--white); }
 
 .footer { background-color: var(--charcoal); color: rgba(255,255,255,0.5); padding: 2rem 3%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
 .footer p { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -308,7 +309,23 @@ a { color: inherit; }
   .top-nav { padding: 1.5rem 3%; }
   .section { padding: 4rem 3%; }
   .hero-stats { grid-template-columns: 1fr; }
+  .hero-left, .hero-right { padding: 2rem 1.5rem; }
+  .hero-buttons { gap: 1rem; }
+  .btn { padding: 1rem 1.75rem; font-size: 0.7rem; }
+  .journey-mobile .journey-node { padding-left: 1.5rem; margin-left: 15px; }
+  .journey-mobile .journey-num { margin-left: -32px; width: 32px; height: 32px; font-size: 0.95rem; }
+  .contact-methods { flex-direction: column; align-items: stretch; }
+  .contact-link { padding: 1rem 1.5rem; }
 }
+@media (max-width: 360px) {
+  h1 { font-size: 3rem; }
+  .hero-name { font-size: 3rem; }
+  h2, .section-title { font-size: clamp(2rem, 9vw, 3rem); }
+  .philosophy blockquote { font-size: clamp(1.5rem, 7vw, 2.5rem); }
+}
+
+img { max-width: 100%; height: auto; }
+* { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 a, button { transition: 0.15s; }
 </style>
